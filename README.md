@@ -1,0 +1,2 @@
+# CASIA_Internship
+在实习期间，我设计并实现了一个多模态问答系统，通过整合Llama3、Lenna和LLaVA大模型与Neo4j知识图谱达成目标。我独立完成技术部署：基于Ollama配置Python环境运行模型，使用ReasonDet数据集评估Lenna和LLaVA在复杂指令下的性能，发现Lenna的&lt;DET>标记显著提升检测精度，而LLaVA在响应流畅性更优。我深入解析了Lenna的MSQ对齐机制与标记处理逻辑，对比LLaVA架构并研究BLIP的图文对齐策略。为实现系统闭环，我扩展Neo4j图谱存储模型、任务元数据，构建自然语言查询→图谱搜索→Llama3生成答案的流水线，并针对Lenna在遮挡场景的定位漂移问题溯源至&lt;DET>标记限制，提出优化触发机制的解决方案。
