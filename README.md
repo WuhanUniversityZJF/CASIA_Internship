@@ -1,2 +1,9 @@
-# CASIA_Internship
-在实习期间，我设计并实现了一个多模态问答系统，通过整合Llama3、Lenna和LLaVA大模型与Neo4j知识图谱达成目标。我独立完成技术部署：基于Ollama配置Python环境运行模型，使用ReasonDet数据集评估Lenna和LLaVA在复杂指令下的性能，发现Lenna的&lt;DET>标记显著提升检测精度，而LLaVA在响应流畅性更优。我深入解析了Lenna的MSQ对齐机制与标记处理逻辑，对比LLaVA架构并研究BLIP的图文对齐策略。为实现系统闭环，我扩展Neo4j图谱存储模型、任务元数据，构建自然语言查询→图谱搜索→Llama3生成答案的流水线，并针对Lenna在遮挡场景的定位漂移问题溯源至&lt;DET>标记限制，提出优化触发机制的解决方案。
+Institute of Automation, Chinese Academy of Sciences  
+07/2024-09/2024  
+Role: Research Assistant in Multimodal Large Language Models  
+Supervisor: Assoc. Prof. Guibo Zhu  
+	Built a multimodal knowledge-graph Q&A system by integrating locally deployed Llama3 via Ollama with Neo4j, enabling structured knowledge retrieval and generative question answering for complex scenarios  
+	Created a Python virtual environment, integrated multimodal libraries and database drivers, and locally deployed Lenna and LLaVA models  
+	Compared Lenna and LLaVA, quantitatively analyzing performance differences: Lenna's <DET> token improved detection accuracy (85.5% vs 70%), while LLaVA produced more fluent text generation  
+	Investigated Lenna's core modules (MSQ feature alignment, <DET> token) and LLaVA's architectural innovations (Grounding-DINO fusion), leveraging the BLIP framework to identify potential improvements in image-text alignment and multi-task self-supervised pretraining  
+	Expanded the Neo4j knowledge graph, incorporating Lenna, LLaVA, and BLIP models along with their tasks, dependencies, and performance data, and integrated with Llama3 for natural-language Q&A
